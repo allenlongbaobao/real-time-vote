@@ -8,7 +8,7 @@ export class PageController {
     return {}
   }
 
-  @Get("/vote", "index.html")
+  @Get("/vote", "vote.html")
   public async mainPage(ctx: IContext) {
     return { title: "投票页面" }
   }
