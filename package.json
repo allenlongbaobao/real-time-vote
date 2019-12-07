@@ -1,0 +1,55 @@
+{
+  "name": "valka-project",
+  "version": "1.0.0",
+  "description": "valka 初始化工程",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -r ts-node/register test/**/*.spec.ts --timeout 5000",
+    "dev": "nodemon --exec ts-node index.ts",
+    "build": "make build",
+    "start": "npm run build  && NODE_ENV=production node dist/index.js",
+    "docker-build": "docker build -t super-bubble .",
+    "docker-run": "docker run -it --rm --init super-bubble",
+    "typeorm": "ts-node ./node_modules/typeorm/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:allenlongbaobao/valka-project.git"
+  },
+  "keywords": [
+    "valka",
+    "typescript"
+  ],
+  "author": "allen",
+  "license": "ISC",
+  "homepage": "git@github.com:allenlongbaobao/valka-project.git",
+  "dependencies": {
+    "@aotools/valka": "^1.1.21",
+    "@types/multiparty": "0.0.31",
+    "@types/node": "^10.5.2",
+    "@types/serialize-error": "^2.1.0",
+    "ali-oss": "^4.15.1",
+    "async-busboy": "^0.7.0",
+    "axios": "^0.18.0",
+    "class-validator": "^0.9.1",
+    "multiparty": "^4.2.1",
+    "mysql": "^2.16.0",
+    "reflect-metadata": "^0.1.12",
+    "typeorm": "^0.2.7"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.4",
+    "@types/mocha": "^5.2.5",
+    "@types/supertest": "^2.0.5",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "nodemon": "1.18.3",
+    "serialize-error": "^2.1.0",
+    "supertest": "^3.1.0",
+    "ts-node": "^7.0.0",
+    "tslib": "^1.9.3",
+    "tslint": "^5.11.0",
+    "tslint-sonarts": "^1.7.0",
+    "typescript": "^3.1.0-dev.20180907"
+  }
+}

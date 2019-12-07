@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- 让页面宽度等于设备宽度，缩放比例为1，禁止用户缩放网页 --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> 
+  <!-- 针对一些不识别viewport的浏览器，如黑莓 --> 
+  <meta name="HandheldFriendly" content="true">
+  <!-- 针对微软的老式浏览器 --> 
+  <meta name="MobileOptimized" content="320">
+  <title>{{ title || "梦想安好否" }}</title>
+
+  <link rel="stylesheet" href="/css/swiper.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+
+  <style>
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background-color: rgb(58, 64, 71);
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+
+ <div id="music-player"></div>
+ <!-- Swiper -->
+ <div class="swiper-container">
+    
+  </div>
+
+  <script>
+    {{if user}}
+      var id = {{user.id}};
+      var unionid = "{{user.unionid}}";
+      var nickName = "{{user.nickName}}";
+      var avatarUrl = "{{user.avatarUrl}}";
+    {{/if}}
+  </script>
+
+
+  <!-- Swiper JS -->
+  <script src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/swiper.min.js"></script>
+  <script src="/js/audioPlay.js"></script>
+  <script src="/js/poster.js"></script>
+  <script src="/js/main.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      scrollbar: {
+        el: '.swiper-scrollbar',
+        hide: true,
+        noSwiping: true
+      }
+    });
+  </script>
+</body>
+</html>

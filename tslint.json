@@ -1,0 +1,20 @@
+{
+  "extends": [
+    "tslint:recommended",
+    "tslint-sonarts"
+  ],
+  "rules": {
+    "no-console": false,
+    "semicolon": [
+      true,
+      "never"
+    ],
+    "max-line-length": false,
+    "object-literal-sort-keys": false,
+    "ordered-imports": false,
+    "no-var-requires": false,
+    "jsdoc-format": false,
+    "no-commented-code": false,
+    "no-implicit-dependencies": false
+  }
+}

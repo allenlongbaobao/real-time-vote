@@ -1,0 +1,18 @@
+{
+  "apps" : [{
+    "name": "real-time-vote",
+    "script"    : "dist/index.js",
+    "instances" : "1",
+    "exec_mode" : "fork",
+    "env": {
+      "NODE_ENV": "development",
+      "PORT": 8888 
+    },
+    "env_production" : {
+       "NODE_ENV": "production",
+       "PORT": 8888
+    },
+    "log_date_format": "YYYY-MM-DD_HH:mm Z",
+    "merge_logs": true
+  }]
+}
