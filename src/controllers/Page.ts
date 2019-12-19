@@ -1,4 +1,5 @@
 import { Controller, Get, IContext, Post, BadRequest } from "@aotools/valka"
+import { storeData } from "../constraints"
 
 @Controller()
 export class PageController {
@@ -8,13 +9,13 @@ export class PageController {
     return {}
   }
 
-  @Get("/vote", "index.html")
+  @Get("/vote", "vote.html")
   public async mainPage(ctx: IContext) {
-    return { title: "投票页面" }
+    return { title: "投票页面", data: storeData}
   }
 
-  @Get("/show", "show.html")
+  @Get("/display", "display.html")
   public async showPage(ctx: IContext) {
-    return { title: "展示页面"}
+    return { title: "展示页面", data: JSON.stringify(storeData)}
   }
 }

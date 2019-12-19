@@ -1,0 +1,144 @@
+html,body {
+  text-align: center;
+  font-size: 18px;
+  background-color: rgb(58, 64, 71);
+}
+
+#wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  margin-bottom: 20vw;
+  margin-top: 50vw;
+}
+
+#item-block {
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.program-item {
+  border: 1px solid #000;
+  width: 44vw;
+  height: 44vw;
+  margin-top: 1vw;
+  position: relative;
+}
+
+.program-item:nth-child(2n) {
+  margin-left: 1vw;
+}
+
+.program-item .item-id  {
+  position: absolute;
+  left: 1vw;
+  top: 1vw;
+}
+
+.program-item .item-title {
+  top: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+input[type="checkbox"]{
+  display:none;
+}
+
+input[type="checkbox"] {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border:1px solid;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 8px;
+  transition: all .5s;
+}
+
+.program-item .item-checkbox {
+  position: absolute;
+  right: 1vw;
+  top: 1vw;
+}
+
+#submit {
+  background: rgb(21, 38, 132);
+  width: 20rem;
+  height: 4rem;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  font-size: 1.5rem;
+  position: fixed;
+  bottom: 5vh;
+}
+
+.success__tip-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,.8);
+  display: none;
+}
+
+.popup {
+  background-color: #fff;
+  width: 50vw;
+  height: 20vh;
+  border-radius: 5vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.success-tip {
+  font-size: 1.4rem;
+  margin-bottom: 5vw;
+  height: 2vh;
+  margin-bottom: 5vh;
+}
+
+
+#confirm {
+  width: 100%;
+  height: 8vh;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: #FFF;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- 让页面宽度等于设备宽度，缩放比例为1，禁止用户缩放网页 --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> 
+  <!-- 针对一些不识别viewport的浏览器，如黑莓 --> 
+  <meta name="HandheldFriendly" content="true">
+  <!-- 针对微软的老式浏览器 --> 
+  <meta name="MobileOptimized" content="320">
+  <title>{{ title }}</title>
+
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <div id="wrapper">
+    <div id="item-block">
+        {{ each data }}
+          <div class="program-item" data-id={{$value.id}}>
+            <span class="item-id">编号{{$index}}</span>
+            <div class="item-title">{{$value.name}}</div>
+            <input class="item-checkbox" type="checkbox" />
+          </div>
+        {{ /each}}
+    </div>
+    <div id="submit">提交</div>
+  </div>
+
+  <div class="success__tip-container">
+    <div class="popup">
+      <p class="success-tip">投票成功，新年快乐!</p>
+      <div id="confirm">确定</div>
+    </div>
+  </div>
+
+  <script src="/js/socket.io.js"></script>
+  <script src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+  <script src="/js/main.js"></script>
+
+</body>
+</html>
